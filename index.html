@@ -1,0 +1,194 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>
+    Allen's 2D Platformer!
+  </title>
+  <link rel="stylesheet" type="text/css" href="Platformat.css">
+  <script src="script.js"></script>
+  <link rel="icon" type="image/jpg" href="favicon.jpg" sizes="32x32" />
+
+</head>
+<body class ="noscroll" onload="gameLoop();EnemyLoop();" >
+  <!--<input type="text" id="tester">-->
+  <!--<a href="https://web.wpi.edu/cgi-bin/Pubcookie/web-access?action=repair"><p>.</p></a>
+  --><!--GRASS2-->
+  <img id = "char"  style = "position: absolute;
+  bottom: 80px; left: 0px;" src="char.jpg" style="width:68px;height:96px;" >
+  <img id = "em"  style = "position: absolute;
+  bottom: 80px; left: 200px;" src="em.png" style="width:68px;height:96px;" >
+
+  <!--<div id = "cloudTL"  style = "position: absolute;
+  top: 0px; left: 0;">
+  <img src="clouds.jpg" style="width:304px;height:228px;" >
+</div>
+<div id = "cloudTL2"  style = "position: absolute;
+top: 20px; left: 404px;">Second Cloud
+<img src="clouds.jpg" style="width:304px;height:228px;" >
+</div>
+<div id = "cloudTL3"  style = "position: absolute;
+top: 10px; left: 807px;"> Third Cloud
+<img src="clouds.jpg" style="width:304px;height:228px;" >
+</div>
+<div id = "cloudTL4"  style = "position: absolute;
+top: 19px; left: 1210px;"> 4th Cloud
+<img src="clouds.jpg" style="width:304px;height:228px;" >
+</div>
+<div id = "cloudTL5"  style = "position: absolute;
+top: 10px; left: 1604px;"> 5th Cloud
+<img src="clouds.jpg" style="width:304px;height:228px;" >
+</div>-->
+  <!--wut-->
+<div id = "dirt"  style = "position: absolute;
+bottom: -10px; left: 0px;"><!-- GRASS1 -->
+<img src="dirt.jpg" style="width:200px;height:95px;" >
+</div>
+<div id = "dirt2"  style = "position: absolute;
+bottom: -10px; left: 200px;"><!--GRASS2-->
+<img src="dirt.jpg" style="width:200px;height:95px;" >
+</div>
+<div id = "dirt3"  style = "position: absolute;
+bottom: -10px; left: 400px;"><!--GRASS2-->
+<img src="dirt.jpg" style="width:200px;height:95px;" >
+</div>
+<div id = "dirt4"  style = "position: absolute;
+bottom: -10px; left: 600px;"><!--GRASS2-->
+<img src="dirt.jpg" style="width:200px;height:95px;" >
+</div>
+<div id = "dirt5"  style = "position: absolute;
+bottom: -10px; left: 600px;"><!--GRASS2-->
+<img src="dirt.jpg" style="width:200px;height:95px;" >
+</div>
+<div id = "dirt6"  style = "position: absolute;
+bottom: -10px; left: 800px;"><!--GRASS2-->
+<img src="dirt.jpg" style="width:200px;height:95px;" >
+</div>
+<div id = "dirt7"  style = "position: absolute;
+bottom: -10px; left: 1000px;"><!--GRASS2-->
+<img src="dirt.jpg" style="width:200px;height:95px;" >
+</div>
+<div id = "dirt8"  style = "position: absolute;
+bottom: -10px; left: 1200px;"><!--GRASS2-->
+<img src="dirt.jpg" style="width:200px;height:95px;" >
+</div>
+<div id = "dirt9"  style = "position: absolute;
+bottom: -10px; left: 1400px;"><!--GRASS2-->
+<img src="dirt.jpg" style="width:200px;height:95px;" >
+</div>
+<div id = "dirt10"  style = "position: absolute;
+bottom: -10px; left: 1600px;"><!--GRASS2-->
+<img src="dirt.jpg" style="width:200px;height:95px;" >
+</div>
+<div id = "dirt11"  style = "position: absolute;
+bottom: -10px; left: 1800px;"><!--GRASS2-->
+<img src="dirt_1pt5.jpg" style="width:102.5px;height:95px;" >
+</div>
+<div id = "dirt12"  style = "position: absolute;
+bottom: -10px; left: 1902.5px;"><!--GRASS2-->
+<img src="dirt_10px.jpg" style="width:17px;height:95px;" >
+</div>
+
+
+
+<!--Below is all the divs for the bricks on the screen-->
+<div id = "brick1"  style = "position: absolute;
+bottom:200px; left: 400px;"><!--GRASS2-->
+<img class="two"src="bricks.jpg" style="width:100px;height:100px;" >
+</div>
+<div id = "brick2"  style = "position: absolute;
+bottom:200px; left: 700px;"><!--GRASS2-->
+<img class="two" src="bricks.jpg" style="width:100px;height:100px;" >
+</div>
+<div id = "brick1"  style = "position: absolute;
+bottom:200px; left: 800px;"><!--GRASS2-->
+<img class="two" src="bricks.jpg" style="width:100px;height:100px;" >
+</div>
+<div id = "brick1"  style = "position: absolute;
+bottom:200px; left: 900px;"><!--GRASS2-->
+<img class="two" src="bricks.jpg" style="width:100px;height:100px;" >
+</div>
+<div id = "brick1"  style = "position: absolute;
+bottom:200px; left: 1000px;"><!--GRASS2-->
+<img class="two" src="bricks.jpg" style="width:100px;height:100px;" >
+</div>
+<div id = "brick1"  style = "position: absolute;
+bottom:200px; left: 1100px;"><!--GRASS2-->
+<img class="two" src="bricks.jpg" style="width:100px;height:100px;" >
+</div>
+
+<div id = "brick1"  style = "position: absolute;
+bottom:410px; left: 900px;"><!--GRASS2-->
+<img  src="bricks.jpg" style="width:100px;height:100px;">
+
+</div>
+<div id = "brick2"  style = "position: absolute;
+bottom:410px; left: 800px;"><!--GRASS2-->
+<img  src="bricks.jpg" style="width:100px;height:100px;">
+
+</div>
+<div id = "brick2"  style = "position: absolute;
+bottom:410px; left: 1000px;"><!--GRASS2-->
+<img  src="bricks.jpg" style="width:100px;height:100px;">
+
+</div>
+<div id = "brick2"  style = "position: absolute;
+bottom:410px; left: 1100px;"><!--GRASS2-->
+<img  src="bricks.jpg" style="width:100px;height:100px;">
+
+</div>
+<div id = "brick2"  style = "position: absolute;
+bottom:410px; left: 1200px;"><!--GRASS2-->
+<img  src="bricks.jpg" style="width:100px;height:100px;">
+
+</div>
+<div id = "brick2"  style = "position: absolute;
+bottom:410px; left: 1300px;"><!--GRASS2-->
+<img  src="bricks.jpg" style="width:100px;height:100px;">
+
+</div>
+<div id = "brick2"  style = "position: absolute;
+bottom:410px; left: 1400px;"><!--GRASS2-->
+<img  src="bricks.jpg" style="width:100px;height:100px;">
+
+</div>
+<div id = "brick2"  style = "position: absolute;
+bottom:410px; left: 1500px;"><!--GRASS2-->
+<img  src="bricks.jpg" style="width:100px;height:100px;">
+
+</div>
+<div id = "brick2"  style = "position: absolute;
+bottom:410px; left: 1600px;"><!--GRASS2-->
+<img  src="bricks.jpg" style="width:100px;height:100px;">
+
+</div>
+<div id = "brick2"  style = "position: absolute;
+bottom:410px; left: 1700px;"><!--GRASS2-->
+<img  src="bricks.jpg" style="width:100px;height:100px;">
+
+</div>
+<div id = "brick2"  style = "position: absolute;
+bottom:410px; left: 1800px;"><!--GRASS2-->
+<img  src="bricks.jpg" style="width:100px;height:100px;">
+
+</div>
+<div id = "brick2"  style = "position: absolute;
+bottom:410px; left: 1900px;"><!--GRASS2-->
+<img  src="bricks.jpg" style="width:20px;height:100px;">
+
+</div>
+
+
+<!-- DIVS FOR THE THIRD LAYER ARE BELOW-->
+<div id = "brick1"  style = "position: absolute;
+bottom:620px; left: 00px;"><!--GRASS2-->
+<img class="two"src="bricks.jpg" style="width:100px;height:100px;" >
+</div>
+
+
+
+
+
+</body>
+
+
+</html>

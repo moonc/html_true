@@ -1,0 +1,20 @@
+body{
+  background-color: rgb(0,176, 255);;
+}
+.center {
+     margin: auto;
+     width: 50%;
+     border: 10px solid black;
+    padding: 50px;
+}
+img.two {
+    height: 50%;
+    width: 50%;
+}
+img.one{
+  height:100%;
+  width:50%;
+}
+.noscroll {
+  overflow: hidden;
+}
